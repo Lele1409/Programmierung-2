@@ -1,0 +1,73 @@
+package testat1;
+
+import javashooter.gameutils.GameLoop;
+import javashooter.playground.Playground;
+import testat1.playground.*;
+
+public class Testat1 extends GameLoop {	// Autoren: Leander Engel und Sven Scherzer
+	public boolean gameStarted = false;
+	
+	public Testat1() {
+		System.out.println("Hallo");
+	}
+	
+	@Override
+	public Playground nextLevel(Playground currentLevel) {
+		// System.out.println("cL " + currentLevel.getName());
+		
+		if (!gameStarted) {
+			gameStarted = true;
+			currentLevel = new ProjektLevel1();
+		} else if (currentLevel.getName() == "Level1") {
+			currentLevel = new ProjektLevel2();
+		} else if (currentLevel.getName() == "Level2") {
+			currentLevel = new ProjektLevel3();
+		} else if (currentLevel.getName() == "Level3") {
+			currentLevel = null;
+		}
+		
+		return currentLevel;
+	}
+
+	public static void main(String[] args) {
+		// Aufgabe 2
+		Testat1 inst = new Testat1();
+		// Verstaendnisfrage: welche Konstruktoren
+		// werden bei der Instanzierung von Testat1 aufgerufen?
+		//
+		// Es wird der in der Unterklasse geschriebene Konstruktor aufgerufen
+		
+		
+		// Aufgabe 3
+		ProjektLevel1 level1 = new ProjektLevel1();
+		ProjektLevel2 level2 = new ProjektLevel2();
+		ProjektLevel3 level3 = new ProjektLevel3();
+
+		System.out.println(level1.getName());
+		System.out.println(level2.getName());
+		System.out.println(level3.getName());
+		
+		// Sie muessen zuerst pruefen ob diese Referenz nicht null ist bevor Sie die
+		// Methode getName aufrufen! Warum?
+		//
+		// Denn andernfalls, müsste man versuchen die Methode getName auf Null auszuführen
+		// jedoch gibt es sie dort nicht.
+		
+		// Spielen sie die drei Level durch und ueberzeugen Sie Sich, dass sie identisch sind.
+		// Warum?
+		//
+		// Die Level sind identisch da wir sie noch nicht konfiguriert haben.
+		
+		// Aufgabe 4
+		inst.runGame(args);
+		
+		// Bonus: fortgeschrittene Modifikationen
+		// Damit das klappt, muss auch die Klasse javashooter.playground.GameObject 
+		// importiert werden. Warum?
+		//
+		// Wir müssen GameObject importieren da wir es in der Signatur
+		// der Methode nutzen wollen, um anzugeben welche Elemente wir annehmen
+		// da diese dann auch in die parent Methode weiteregegeben werden
+	}
+
+}

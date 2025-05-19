@@ -1,0 +1,47 @@
+package testat1;
+
+import javashooter.gameutils.GameLoop;
+import javashooter.playground.Playground;
+import testat1.playground.*;
+
+public class Testat1 extends GameLoop {	// Autoren: Leander Engel und Sven Scherzer
+	public boolean gameStarted = false;
+	
+	public Testat1() {
+		System.out.println("Hallo");
+	}
+	
+	@Override
+	public Playground nextLevel(Playground currentLevel) {
+		System.out.println("cL " + currentLevel.getName());
+		
+		if (!gameStarted && currentLevel == null) {
+			
+		}
+		
+		
+		return null;
+	}
+
+	public static void main(String[] args) {
+		// Aufgabe 2
+		Testat1 inst = new Testat1();
+		// Verstaendnisfrage: welche Konstruktoren 
+		// werden bei der Instanzierung von Testat1 aufgerufen?
+		// Es wird der in der Unterklasse geschriebene Konstruktor aufgerufen
+		
+		
+		// Aufgabe 3
+		ProjektLevel1 level1 = new ProjektLevel1();
+		ProjektLevel2 level2 = new ProjektLevel2();
+		ProjektLevel3 level3 = new ProjektLevel3();
+
+		System.out.println(level1.getName());
+		System.out.println(level2.getName());
+		System.out.println(level3.getName());
+		
+		// Aufgabe 4
+		inst.runGame(args);
+	}
+
+}

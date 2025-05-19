@@ -1,0 +1,21 @@
+package testat1;
+
+import javashooter.gameutils.GameLoop;
+import javashooter.playground.Playground;
+
+public class Testat1 extends GameLoop {	// Autoren: Leander Engel und Sven Scherzer
+	public Testat1() {
+		System.out.println("Hallo");
+	}
+	
+	@Override
+	public Playground nextLevel(Playground currentLevel) {
+		return null;
+	}
+
+	public static void main(String[] args) {
+		Testat1 inst = new Testat1();
+	}
+
+}
+

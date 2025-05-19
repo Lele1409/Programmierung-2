@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<section name="java.lang.Class">
+		<item key="replaceBarOpen" value="false"/>
+		<list key="findhistory">
+			<item value="getObject"/>
+			<item value="ego"/>
+			<item value="createEnemyShot"/>
+			<item value="start"/>
+			<item value="redrawLevel"/>
+			<item value="spaceinvaderslevel!!!"/>
+			<item value="preparedLevel"/>
+			<item value="msg"/>
+			<item value="message"/>
+			<item value="calcenemyshotprob"/>
+			<item value="calc"/>
+			<item value="calcnrenemies"/>
+			<item value="calcenemyshotpr"/>
+			<item value="deleteobject"/>
+			<item value="timeStep"/>
+		</list>
+	</section>
+</section>

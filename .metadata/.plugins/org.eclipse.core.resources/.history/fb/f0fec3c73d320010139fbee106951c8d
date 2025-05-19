@@ -1,0 +1,15 @@
+package testat2;
+
+
+import javashooter.gameutils.GameLoop;
+import javashooter.playground.Playground;
+
+public class Testat2 extends GameLoop {
+
+	@Override
+	public Playground nextLevel(Playground currentLevel) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,7 @@
+package testat2.playground;
+
+import spaceinvadersProject.playground.SpaceInvadersLevel;
+
+public class BossLevel25 extends SpaceInvadersLevel {
+
+}

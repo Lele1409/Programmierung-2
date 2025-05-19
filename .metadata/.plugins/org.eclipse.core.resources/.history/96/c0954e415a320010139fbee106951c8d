@@ -1,0 +1,45 @@
+package testat2.playground;
+
+import javashooter.gameobjects.GameObject;
+import spaceinvadersProject.playground.SpaceInvadersLevel;
+
+public class BossLevel25 extends SpaceInvadersLevel {
+	public int bossHP = 20;
+	
+	@Override
+	protected int calcNrEnemies() {
+		return 1;
+	}
+	
+	@Override
+	protected double calcEnemySpeedX() {
+	  return 180;
+	}
+	
+	@Override
+	protected double calcEnemySpeedY() {
+	  return 40;
+	}
+	
+	@Override
+	protected double calcEnemyShotProb() {
+	  return 0.01 * this.getTimestep();
+	}
+	
+	@Override
+	protected String getStartupMessage() {
+	   return "BossLevel!!";
+	}
+
+	@Override
+	protected void actionIfEnemyIsHit(GameObject e, GameObject shot) {
+		if (bossHP <= 20) {
+			super.actionIfEnemyIsHit(e, shot);
+		} else {
+			bossHP -= 1;
+		}
+	}
+
+
+	
+}

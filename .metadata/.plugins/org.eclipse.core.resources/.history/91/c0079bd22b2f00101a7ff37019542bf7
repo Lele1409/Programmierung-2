@@ -1,0 +1,12 @@
+package testat1.playground;
+
+import spaceinvadersProject.playground.SpaceInvadersLevel;
+
+public class ProjektLevel2 extends SpaceInvadersLevel {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

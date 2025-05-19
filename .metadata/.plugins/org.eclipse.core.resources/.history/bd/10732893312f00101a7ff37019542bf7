@@ -1,0 +1,17 @@
+package testat1.playground;
+
+import spaceinvadersProject.playground.SpaceInvadersLevel;
+
+public class ProjektLevel1 extends SpaceInvadersLevel {
+	
+	@Override
+	public String getName() {
+		return "Level1";
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
